@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nginx
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: kafka.r-eusebio.online
+    external-dns.alpha.kubernetes.io/hostname: appexample.r-eusebio.online
 spec:
   type: LoadBalancer
   ports:
