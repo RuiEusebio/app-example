@@ -4,6 +4,9 @@ metadata:
   name: nginx
   annotations:
     external-dns.alpha.kubernetes.io/hostname: appexample.r-eusebio.online
+    service.beta.kubernetes.io/aws-load-balancer-type: external
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip  # specifies that the IPs of the individual Pods are directly added as target to the NLBs.
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
 spec:
   type: LoadBalancer
   ports:
